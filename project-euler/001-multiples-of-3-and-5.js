@@ -1,5 +1,6 @@
 /*
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these
+multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below the provided parameter value number.
 
@@ -10,8 +11,10 @@ multiplesOf3and5(8456) should return 16687353.
 multiplesOf3and5(19564) should return 89301183.
  */
 
+const logResult = require('./log-result');
+
 const arr = [10, 49, 1000, 8456, 19564];
-logResult(arr);
+logResult.logResult(multiplesOf3and5, arr);
 
 function multiplesOf3and5(n) {
   let sum = 0;
@@ -23,10 +26,4 @@ function multiplesOf3and5(n) {
   }
 
   return sum;
-}
-
-function logResult(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    console.log(multiplesOf3and5(arr[i]))
-  }
 }
